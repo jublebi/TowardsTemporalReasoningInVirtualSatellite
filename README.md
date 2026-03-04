@@ -3,7 +3,7 @@ This repository contains data and instructions to try the temporal extension of 
 
 First, clone the repository and navigate to the it with the following commands:
 ```shell
-git clone git@github.com:jublebi/TowardsTemporalReasoningInVirtualSatellite.git
+git clone git@github.com:jublebi/TowardsTemporalReasoningInVirtualSatellite.git temporal_virsat
 cd temporal_virsat
 ```
 
