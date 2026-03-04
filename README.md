@@ -20,8 +20,11 @@ docker compose up -d
 The tool is now available at http://localhost:8000 
 
 The following two users are added by default to experiment collaboration between users. Both have the same access to the Demo repository
-Username | Password
-admin | admin
-user | user
+| Username | Password |
+| :--- | ---: |
+| admin | admin |
+| user | user |
+
+A video demonstrating our temporal extension of Virtual Satellite is available at: https://youtu.be/FOI76H2N828
 
 
