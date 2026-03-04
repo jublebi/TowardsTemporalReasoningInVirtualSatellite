@@ -1,0 +1,23 @@
+services:
+  virsat:
+    image: temporal_workspace_virsat-virsat:latest
+    ports:
+      - 8000:8000
+    volumes:
+      - type: volume
+        source: virsat-data
+        target: /data
+    environment:
+      - SECRET=7yiM9wMGJx4fKJ0CPO008i15cYU8AU2wneOLX6fRltTkHGpo+4JoGY/3TgbkV2Hm0fvFdV3s3KFvl0sV430Y2w==
+      - DATABASE_URL=sqlite:/data/database.db
+      - PUBLIC_TCN_ALGORITHMS_API_KEY="qG=A2HyC|>Yj8+9"
+      - PUBLIC_TCN_ALGORITHMS_API_URL="http://localhost:8080"
+    depends_on:
+      - tcn
+
+  tcn:
+    image: temporal_workspace_virsat-tcn:latest  
+    ports:
+    - "8080:8080"
+volumes:
+  virsat-data:
