@@ -72,6 +72,13 @@ To check the temporal correctness of the temporal graph, simply press the “Che
 
 ### Add another temporal graph
 
+#### Modeling assumptions
+
+We assume that the user is familiar with the notion of Simple Temporal Networks with Uncertainty (STNU) and how they represent temporal information. If not, we refer to the literature and point out some specifics for our implementation:
+- Nodes are set correctly to contingent or non-contingent. A node is contingent if it is the target of a contingent edge. Otherwise, it is non-contingent
+- For contingent edges, always two exist. The lower and upper values form the contingent interval, within which the timepoint can occur. You can take a look at the exemplary graphs and see that there are always two dotted edges from the same source to the same target. Use positive weights.
+- Non-contingent edges represent inequalities between timepoints. If  A - v -> B is present, it indicates that B < A + v . v can be positive or negative. For non-contingent edges, it is also okay that only one edge exists between two nodes. For instance, between start and launch only one edge exists, representing the overall deadline. 
+
 To add another temporal graph, press the “Add root element” button within the edit mode. Within the pop-up, specify the name and select “Temporal Graph” as the type.
 
 ![alt text](/images/Add_Root_Element.png)
